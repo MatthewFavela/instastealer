@@ -1,6 +1,6 @@
 import React from 'react'
 import Sidebar from './Sidebar'
-import {Router, Switch, Route} from 'react-router-dom'
+import { Switch, Route} from 'react-router-dom'
 import ClientPanelHome from '../pages/ClientPanelHome'
 import ClientPanel from '../pages/ClientPanel'
 import Shop from '../pages/Shop'

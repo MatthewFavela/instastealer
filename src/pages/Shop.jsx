@@ -1,22 +1,11 @@
 import React, { useState, useEffect } from 'react'
-import StripeCheckout from 'react-stripe-checkout'
-import axios from 'axios'
 import { toast } from 'react-toastify'
 import fire from '../fire'
 import { loadStripe } from '@stripe/stripe-js'
-import { useStripe, useElements, CardElement } from '@stripe/react-stripe-js';
-import stripe from 'stripe'
-import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
-import TextField from '@material-ui/core/TextField';
-import Button from '@material-ui/core/Button';
+import { useStripe, useElements } from '@stripe/react-stripe-js';
 import {makeStyles} from '@material-ui/core/styles';
-import {Router, Switch, Route} from 'react-router-dom'
 import {Link} from 'react-router-dom'
-import BasicCheckout from '../components/checkout-pages/BasicCheckout'
-import ProCheckout from '../components/checkout-pages/ProCheckout'
-import MemepageCheckout from '../components/checkout-pages/MemepageCheckout'
-import UltimateCheckout from '../components/checkout-pages/UltimateCheckout'
+
 
 toast.configure()
 

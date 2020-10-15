@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import fire from '../fire'
 import BasicClientPanel from '../components/basic-client-panel/BasicClientPanel'
-import BasicCheckout from '../components/checkout-pages/BasicCheckout'
-import ReactDOM from 'react-dom'
 
 export function ClientPanel(props) {
 
@@ -14,8 +12,6 @@ export function ClientPanel(props) {
             console.log('Current User', currentUser.uid)
         })
     })
-
-    const uid = currentUser.uid
     const userEmail = currentUser.email
 
     const db = fire.firestore().collection("subscriptions")

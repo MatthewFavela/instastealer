@@ -1,17 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
-import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import {makeStyles} from '@material-ui/core/styles';
 import fire from '../../fire'
-import { loadStripe } from '@stripe/stripe-js'
 import { useStripe, useElements, CardElement } from '@stripe/react-stripe-js';
 import axios from 'axios'
-import Shop from '../../pages/Shop'
-import {Link} from 'react-router-dom'
 
-const stripePromise = loadStripe('pk_test_51HZ9LbEyuKjd388INbEpvJJwGsRJsOP2TkTDtvMAgtzEJWTivdFDClRwrGKZWuyeY689cV5X26wxtLFFhhdyk2O200tMtrv9OP');
+
+//const stripePromise = loadStripe('pk_test_51HZ9LbEyuKjd388INbEpvJJwGsRJsOP2TkTDtvMAgtzEJWTivdFDClRwrGKZWuyeY689cV5X26wxtLFFhhdyk2O200tMtrv9OP');
 export function UltimateCheckout() {
 
 
@@ -55,7 +52,6 @@ export function UltimateCheckout() {
     })
 
     const userEmail = currentUser.email
-    const uid = currentUser.uid
 
     const stripe = useStripe();
     const elements = useElements();

@@ -1,7 +1,6 @@
-import React, { useState, useEffect, Component } from 'react'
-import ReactDOM from 'react-dom'
-import fire from '../../fire'
-import BasicCheckout from '../checkout-pages/BasicCheckout'
+import React from 'react'
+// import fire from '../../fire'
+
 export function BasicClientPanel(props) {
     return(
         <div className="dashboard"></div>
