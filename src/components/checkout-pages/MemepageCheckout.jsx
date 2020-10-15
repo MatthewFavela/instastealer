@@ -76,7 +76,7 @@ export function MemepageCheckout() {
         if (result.error) {
           console.log(result.error.message);
         } else {
-          const res = await axios.post('http://localhost:3001/checkout/memepage', {'payment_method': result.paymentMethod.id, 'email': currentUser.email, 'plan_id': plan_id});
+          const res = await axios.post('https://us-central1-instastealer-79c93.cloudfunctions.net/application/checkout/memepage', {'payment_method': result.paymentMethod.id, 'email': currentUser.email, 'plan_id': plan_id});
           // eslint-disable-next-line camelcase
           const {client_secret, status} = res.data;
     

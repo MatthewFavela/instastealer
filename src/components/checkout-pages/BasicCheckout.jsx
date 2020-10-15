@@ -9,7 +9,7 @@ import { useStripe, useElements, CardElement } from '@stripe/react-stripe-js';
 import axios from 'axios'
 
 
-const stripePromise = loadStripe('pk_test_51HZ9LbEyuKjd388INbEpvJJwGsRJsOP2TkTDtvMAgtzEJWTivdFDClRwrGKZWuyeY689cV5X26wxtLFFhhdyk2O200tMtrv9OP');
+//const stripePromise = loadStripe('pk_test_51HZ9LbEyuKjd388INbEpvJJwGsRJsOP2TkTDtvMAgtzEJWTivdFDClRwrGKZWuyeY689cV5X26wxtLFFhhdyk2O200tMtrv9OP');
 export function BasicCheckout() {
 
 
@@ -77,7 +77,7 @@ export function BasicCheckout() {
         if (result.error) {
           console.log(result.error.message);
         } else {
-          const res = await axios.post('https://clever-khorana-f8c5ec.netlify.app/checkout/basic', {'payment_method': result.paymentMethod.id, 'email': currentUser.email, 'plan_id': plan_id});
+          const res = await axios.post('https://us-central1-instastealer-79c93.cloudfunctions.net/application/checkout/basic', {'payment_method': result.paymentMethod.id, 'email': currentUser.email, 'plan_id': plan_id});
           // eslint-disable-next-line camelcase
           const {client_secret, status} = res.data;
     

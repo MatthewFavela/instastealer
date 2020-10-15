@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { toast } from 'react-toastify'
 import fire from '../fire'
-import { loadStripe } from '@stripe/stripe-js'
 import { useStripe, useElements } from '@stripe/react-stripe-js';
 import {makeStyles} from '@material-ui/core/styles';
 import {Link} from 'react-router-dom'
@@ -21,27 +20,9 @@ const useStyles = makeStyles({
     },
 });
 
-const CARD_ELEMENT_OPTIONS = {
-    style: {
-        base: {
-            'color': 'blue',
-            'fontFamily': '"Helvetica Neue", Helvetica, sans-serif',
-            'fontSmoothing': 'antialiased',
-            'fontSize': '16px',
-            'background': 'red',
-            '::placeholder': {
-                color: '#aab7c4',
-            },
-        },
-        invalid: {
-            color: '#fa755a',
-            iconColor: '#fa755a',
-        },
-    },
-}
 
 
-const stripePromise = loadStripe('pk_test_51HZ9LbEyuKjd388INbEpvJJwGsRJsOP2TkTDtvMAgtzEJWTivdFDClRwrGKZWuyeY689cV5X26wxtLFFhhdyk2O200tMtrv9OP');
+//const stripePromise = loadStripe('pk_test_51HZ9LbEyuKjd388INbEpvJJwGsRJsOP2TkTDtvMAgtzEJWTivdFDClRwrGKZWuyeY689cV5X26wxtLFFhhdyk2O200tMtrv9OP');
 const Shop = () => {
 
     const [currentUser, setCurrentUser] = useState('')
@@ -52,13 +33,6 @@ const Shop = () => {
             console.log('Current User', currentUser.uid)
         })
     })
-
-    const uid = currentUser.uid
-
-    const stripe = useStripe();
-    const elements = useElements();
-
-    const classes = useStyles();
 
     return (
         <>
